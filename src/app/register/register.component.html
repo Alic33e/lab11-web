@@ -1,0 +1,25 @@
+
+<div class="deyver">
+  <input type="radio" id="registerForm" name="formToggle" checked>
+  <div class="wrapper" id="registerFormContent">
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <h1>Register</h1>
+      <div class="input-box">
+        <label for="username"></label>
+        <input id="username" formControlName="username" type="text" placeholder="Username" />
+      </div>
+      <div class="input-box">
+        <label for="email"></label>
+        <input id="email" formControlName="email" type="email" placeholder="Email" />
+      </div>
+      <div class="input-box">
+        <label for="password"></label>
+        <input id="password" formControlName="password" type="password" placeholder="Password" />
+      </div>
+      <button type="submit" class="btn">Registrarse</button>
+      <div class="link">
+        <p>¿Ya tienes una cuenta? <button type="submit" class="btn" (click)="navigateToLogin()">Inicia Sesión</button></p>
+      </div>
+    </form>
+  </div>
+</div>
